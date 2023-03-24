@@ -21,7 +21,7 @@ wsClient.on('open', () => {
 
 wsClient.on('message', data => {
     data = data.toString();
-    console.log('Received data from websocket: ', data)
+//     console.log('Received data from websocket: ', data)
     // Send the real-time data to the connected clients
     app.locals.io.sockets.emit('update', data)
 })
